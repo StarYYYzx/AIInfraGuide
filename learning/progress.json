@@ -1,0 +1,1512 @@
+{
+  "schema_version": 1,
+  "revision": 1,
+  "updated_at": "2026-11-16",
+  "course_commit": "bffa2b0bcbf1b3d5d33c5ba0869611a74f6c59e4",
+  "repository": "https://github.com/StarYYYzx/AIInfraGuide",
+  "policy": {
+    "mainline": "Infra-first",
+    "weekends": "no study, no preparation, no catch-up",
+    "weekday_minutes": 75,
+    "report": "previous workday if morning; Monday prepared Friday",
+    "advance": "only after evidence-based gate"
+  },
+  "baseline": {
+    "verified_learning": "仅完成课程规划、文档索引和接手档案；尚无用户答题、练习或实验结果证明掌握。",
+    "assumptions": "不预设CUDA Reduce完成，不预设周末学习或某模型已跑通。"
+  },
+  "cursor": {
+    "day": 1,
+    "target_node": "I11",
+    "section": "1.1-LLM推理基础：§1–3，先诊断后限定阅读",
+    "mode": "diagnostic_pending",
+    "remediation_stack": [],
+    "next_action": "确认今天可用时长；询问用户对Prefill/Decode、KV、TTFT/TPOT/E2E的理解，先提一题并等待回答。",
+    "pending_question": "请用自己的话说明Prefill和Decode分别在做什么；当前只提这一题，后续按答题情况再诊断。",
+    "next_report": "尚无学习结果；初次汇报只讲课程主线与待验证问题，不讲已掌握。"
+  },
+  "days": {
+    "1": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "2": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "3": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "4": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "5": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "6": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "7": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "8": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "9": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "10": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "11": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "12": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "13": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "14": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "15": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "16": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "17": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "18": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "19": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "20": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "21": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "22": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "23": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "24": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "25": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "26": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "27": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "28": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "29": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "30": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "31": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "32": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "33": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "34": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "35": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "36": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "37": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "38": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "39": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "40": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "41": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "42": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "43": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "44": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "45": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "46": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "47": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "48": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "49": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "50": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "51": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "52": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "53": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "54": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "55": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "56": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "57": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "58": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "59": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "60": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "61": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "62": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "63": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "64": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "65": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "66": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "67": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "68": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "69": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "70": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "71": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "72": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "73": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "74": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "75": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "76": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "77": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "78": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "79": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "80": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "81": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "82": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "83": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "84": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "85": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "86": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "87": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "88": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "89": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "90": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "91": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "92": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "93": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "94": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "95": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "96": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "97": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "98": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "99": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "100": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "101": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "102": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "103": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "104": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "105": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "106": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "107": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "108": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "109": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "110": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "111": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "112": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "113": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "114": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "115": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "116": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "117": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "118": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "119": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    },
+    "120": {
+      "status": "not_started",
+      "level": "unverified",
+      "gate": "pending",
+      "sessions": [],
+      "evidence": [],
+      "notes": ""
+    }
+  },
+  "nodes": {
+    "P1": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "P2": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "P3": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "P4": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "P5": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "P6": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "R0": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "R1": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "R2": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "T1": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "T2": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "T3": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "T4": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "T5": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "T6": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "T7": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "T8": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "T9": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C11": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C12": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C13": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C14": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C21": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C22": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C23": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C24": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C31": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C41": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C51": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C52": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C61": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C62": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "C71": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "D11": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "D12": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "D21": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "D31": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "D41": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "D42": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "I11": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "I12": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "I21": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "I22": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "I23": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "I24": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "I25": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "N31": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "N32": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "N33": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "N34": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "N35": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "N36": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "Q41": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "Q42": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "Q43": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "Q44": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "Q45": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "Q46": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "S51": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "S52": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "S53": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "S54": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "S55": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "V61": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "V62": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "V63": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "V64": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "V65": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "V66": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "E91": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OP3": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OP4": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OP5": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OP6": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OD10": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OD11": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OD1": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OD2": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OD3": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OD4": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OD5": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OD6": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OD7": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OD8": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OD9": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OC1": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OC2": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OC3": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OC4": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OC5": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OC6": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OC7": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OC8": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OI1": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OI2": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OI3": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OI4": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OI5": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OI6": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OI7": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OI8": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    },
+    "OI9": {
+      "level": "unverified",
+      "evidence": [],
+      "notes": ""
+    }
+  },
+  "recent_sessions": [
+    "learning/sessions/2026-11-16_00_setup.md"
+  ],
+  "blockers": [
+    "尚无基线诊断；实际掌握程度待确认。"
+  ],
+  "environment": {
+    "summary": "本地课程可读；跨设备应重新核对软件与硬件。",
+    "experimental_capability": "GPU型号、运行时、模型/数据权限和多卡条件均未确认。"
+  }
+}

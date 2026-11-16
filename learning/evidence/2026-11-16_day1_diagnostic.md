@@ -38,3 +38,10 @@
 ## 会话内 AI 生成的配图
 
 - SVG 流程图（Prompt → Prefill → Decode + KV Cache 增长）：仅作讲解辅助，不属于用户掌握证据。
+
+## 补充：Transformer 架构回补（同日 13:12–13:27）
+
+- 用户提出心智模型："Prefill=权重矩阵×token矩阵，输出压缩成一个向量即首 token，也是 KV cache 的开头；Decode=矩阵2+KV cache 拼起来再乘权重。"
+- AI 判定：主干半对（两矩阵相乘成立）；三处错误——①首 token 来自最后一行隐藏状态经 lm head，非"压缩"；②KV Cache 开头是 prompt 的 K/V，非生成 token；③Decode 不是"矩阵2+Cache 再乘权重"——X 不保留、Cache 只在注意力里被读、每步过权重的仅新 token 1 行（GEMV）。
+- 用户随后表示 Transformer 架构基础欠缺，申请带问题学习。AI 给出限定回补路线：3.2§2.2-2.3/§4.1-4.2、3.3§2-3、3.7§2-3.2，附三问验收标准；progress.json 已将此记入 remediation_stack（revision 3）。
+- 状态：回补未开始、未验收。

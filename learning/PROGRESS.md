@@ -2,7 +2,7 @@
 
 > 自动由 progress.json 生成。修改真实状态后运行 python learning/tools/progress.py render；不直接改本文件。
 
-- 更新：2026-11-16（revision 2）
+- 更新：2026-11-16（revision 3）
 - 主线验收通过：0/120 学习日
 - 当前：第1学习日 / W1D1 / 系统地图与培训前导入
 - 状态：in_progress；能力证据等级：explained
@@ -12,10 +12,10 @@
 
 - 首读顺序：[I11 · 1.1-LLM推理基础](../docs/guides/%E6%A8%A1%E5%9D%97%E5%9B%9B-%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96/%E7%AC%AC1%E7%AB%A0-LLM%E6%8E%A8%E7%90%86%E5%9F%BA%E7%A1%80/1.1-LLM%E6%8E%A8%E7%90%86%E5%9F%BA%E7%A1%80.md) → [R0 · AI Infra学习路线](../docs/guides/AI%20Infra%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.md)
 - 当天限定范围：I11§1–3：只读Prefill/Decode、KV和TTFT/TPOT/E2E；R0只看路线与验收
-- 当前精确断点：I11 §1-3：§1-2 复述已通过(explained)；§3 指标算例未做；Memory-bound 机制待重验
-- 下一动作：下一工作日先重验 Memory-bound 判据（1题）；通过则补 TTFT/TPOT/E2E 数字算例并判定 Day1 gate；未通过则沿 remediation_stack 回补，不推进 cursor。
-- 待提问：不借助提示说明为什么每步只算1个token的Decode是访存受限（判据：算术强度/每步读取字节量 vs 计算量）。
-- 回补栈：原目标：Day1 gate 独立练习通过 I11 §1-3 → 当前回补：算术强度判据（每步读固定权重+当前全部KV，只换回1个token的计算）→ 返回条件：不借助提示说出 Decode 每步读取字节数大而计算量极小、时间由显存带宽主导，故为 Memory-bound
+- 当前精确断点：I11 §1-3：§1-2 复述通过(explained)；§3 指标算例未做；Memory-bound 判据与 Transformer Q/K/V 基础双回补中
+- 下一动作：回补模式：按 remediation_stack 第二条读 3.2/3.3/3.7 限定小节并回答三问；回补通过后先答 Memory-bound 判据题，再补 §3 指标算例，最后判 Day1 gate。
+- 待提问：回补验收三问（3.2/3.3/3.7 限定小节）：①'过一遍网络'过的是什么②K/V 从哪来、为什么缓存 K/V 不缓存 Q③Causal Mask 为什么让 Prefill 能并行而因果不乱。回补完成后回到原题：不借助提示说明 Decode 为何访存受限。
+- 回补栈：原目标：Day1 gate 独立练习通过 I11 §1-3 → 当前回补：算术强度判据（每步读固定权重+当前全部KV，只换回1个token的计算）→ 返回条件：不借助提示说出 Decode 每步读取字节数大而计算量极小、时间由显存带宽主导，故为 Memory-bound → 原目标：Day1 gate 独立练习通过 → 当前回补：Transformer 最小基础（Q/K/V 投影来源、Decoder Block 逐层结构、lm head）→ 返回条件：能答出三问——①过一遍网络过的是什么②K/V从哪来为何缓存它们③Causal Mask为何允许Prefill并行；限定阅读 3.2§2.2-2.3/§4.1-4.2、3.3§2-3、3.7§2-3.2
 - 下次汇报：已讲解并复述通过：Prefill并行处理已知Prompt（决定TTFT）、Decode每步串行+更新KV Cache（决定TPOT）；KV Cache账例0.5MB/token。未验证：Memory-bound判据未独立复现；指标算例未做。
 
 ## 当前阻塞与环境

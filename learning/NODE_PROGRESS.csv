@@ -38,7 +38,7 @@ D21,2.1 集合通信原语详解,正文,docs/guides/模块三-分布式训练/2.
 D31,3.1 优化器原理与显存开销分析,正文,docs/guides/模块三-分布式训练/3.1 优化器原理与显存开销分析.md,unverified,,
 D41,4.1 数据并行详解,正文,docs/guides/模块三-分布式训练/4.1 数据并行详解.md,unverified,,
 D42,4.2 PyTorch 数据并行从原理到实战,正文,docs/guides/模块三-分布式训练/4.2 PyTorch 数据并行从原理到实战.md,unverified,,
-I11,1.1-LLM推理基础,正文,docs/guides/模块四-推理优化/第1章-LLM推理基础/1.1-LLM推理基础.md,unverified,,
+I11,1.1-LLM推理基础,正文,docs/guides/模块四-推理优化/第1章-LLM推理基础/1.1-LLM推理基础.md,explained,learning/evidence/2026-11-16_day1_diagnostic.md,仅 §1-2 explained（2026-11-16 复述通过）；§3 讲解未练习；§4 未学。不视为整篇掌握。
 I12,1.2-vLLM快速入门,正文,docs/guides/模块四-推理优化/第1章-LLM推理基础/1.2-vLLM快速入门.md,unverified,,
 I21,2.1-PagedAttention,正文,docs/guides/模块四-推理优化/第2章-推理引擎核心技术/2.1-PagedAttention.md,unverified,,
 I22,2.2-Continuous Batching,正文,docs/guides/模块四-推理优化/第2章-推理引擎核心技术/2.2-Continuous Batching.md,unverified,,

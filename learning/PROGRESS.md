@@ -2,31 +2,34 @@
 
 > 自动由 progress.json 生成。修改真实状态后运行 python learning/tools/progress.py render；不直接改本文件。
 
-- 更新：2026-11-16（revision 1）
+- 更新：2026-11-16（revision 2）
 - 主线验收通过：0/120 学习日
 - 当前：第1学习日 / W1D1 / 系统地图与培训前导入
-- 状态：not_started；能力证据等级：unverified
+- 状态：in_progress；能力证据等级：explained
 - 已核实学习事实：仅完成课程规划、文档索引和接手档案；尚无用户答题、练习或实验结果证明掌握。
 
 ## 下一位AI从这里继续
 
 - 首读顺序：[I11 · 1.1-LLM推理基础](../docs/guides/%E6%A8%A1%E5%9D%97%E5%9B%9B-%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96/%E7%AC%AC1%E7%AB%A0-LLM%E6%8E%A8%E7%90%86%E5%9F%BA%E7%A1%80/1.1-LLM%E6%8E%A8%E7%90%86%E5%9F%BA%E7%A1%80.md) → [R0 · AI Infra学习路线](../docs/guides/AI%20Infra%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.md)
 - 当天限定范围：I11§1–3：只读Prefill/Decode、KV和TTFT/TPOT/E2E；R0只看路线与验收
-- 当前精确断点：1.1-LLM推理基础：§1–3，先诊断后限定阅读
-- 下一动作：确认今天可用时长；询问用户对Prefill/Decode、KV、TTFT/TPOT/E2E的理解，先提一题并等待回答。
-- 待提问：请用自己的话说明Prefill和Decode分别在做什么；当前只提这一题，后续按答题情况再诊断。
-- 回补栈：空；先诊断，不预设需要补完整基础
-- 下次汇报：尚无学习结果；初次汇报只讲课程主线与待验证问题，不讲已掌握。
+- 当前精确断点：I11 §1-3：§1-2 复述已通过(explained)；§3 指标算例未做；Memory-bound 机制待重验
+- 下一动作：下一工作日先重验 Memory-bound 判据（1题）；通过则补 TTFT/TPOT/E2E 数字算例并判定 Day1 gate；未通过则沿 remediation_stack 回补，不推进 cursor。
+- 待提问：不借助提示说明为什么每步只算1个token的Decode是访存受限（判据：算术强度/每步读取字节量 vs 计算量）。
+- 回补栈：原目标：Day1 gate 独立练习通过 I11 §1-3 → 当前回补：算术强度判据（每步读固定权重+当前全部KV，只换回1个token的计算）→ 返回条件：不借助提示说出 Decode 每步读取字节数大而计算量极小、时间由显存带宽主导，故为 Memory-bound
+- 下次汇报：已讲解并复述通过：Prefill并行处理已知Prompt（决定TTFT）、Decode每步串行+更新KV Cache（决定TPOT）；KV Cache账例0.5MB/token。未验证：Memory-bound判据未独立复现；指标算例未做。
 
 ## 当前阻塞与环境
 
-- 尚无基线诊断；实际掌握程度待确认。
+- Memory-bound 机制未独立复现，Day1 gate 未通过，cursor 停留 Day1。
+- GPU/实测环境未确认（不影响理论环节）。
+- 用户指示：时间灵活，不按固定分钟计时，有时间时主动来窗口即可。
 
 - 环境：本地课程可读；跨设备应重新核对软件与硬件。
 - 实验条件：GPU型号、运行时、模型/数据权限和多卡条件均未确认。
 
 ## 最近会话
 
+- [learning/sessions/2026-11-16_01.md](sessions/2026-11-16_01.md)
 - [learning/sessions/2026-11-16_00_setup.md](sessions/2026-11-16_00_setup.md)
 
 ## 120学习日进度
@@ -35,7 +38,7 @@
 
 | 学习日 | 主课 | 状态 | 证据等级 | 最近会话 |
 |---|---|---|---|---|
-| 1 / W1D1 | I11 → R0 | not_started | unverified | — |
+| 1 / W1D1 | I11 → R0 | in_progress | explained | learning/sessions/2026-11-16_01.md |
 | 2 / W1D2 | P4 → P2 | not_started | unverified | — |
 | 3 / W1D3 | Q41 | not_started | unverified | — |
 | 4 / W1D4 | P3 → P2 | not_started | unverified | — |

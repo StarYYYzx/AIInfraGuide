@@ -1,18 +1,19 @@
 {
   "schema_version": 1,
-  "revision": 3,
-  "updated_at": "2026-11-16",
+  "revision": 4,
+  "updated_at": "2026-11-17",
   "course_commit": "bffa2b0bcbf1b3d5d33c5ba0869611a74f6c59e4",
   "repository": "https://github.com/StarYYYzx/AIInfraGuide",
   "policy": {
     "mainline": "Infra-first",
     "weekends": "no study, no preparation, no catch-up",
     "weekday_minutes": 75,
+    "time_policy": "flexible; 75 minutes reference only; no fixed timing or overtime report",
     "report": "previous workday if morning; Monday prepared Friday",
     "advance": "only after evidence-based gate"
   },
   "baseline": {
-    "verified_learning": "仅完成课程规划、文档索引和接手档案；尚无用户答题、练习或实验结果证明掌握。",
+    "verified_learning": "11-16会话证据支持I11§1–2复述通过；Day1仍in_progress/explained。指标算例未做，Transformer数据流与访存判据需回补，尚无实测。11-17仅更新指导与资源事实，不增加学习通过项。",
     "assumptions": "不预设CUDA Reduce完成，不预设周末学习或某模型已跑通。"
   },
   "cursor": {
@@ -21,11 +22,11 @@
     "section": "I11 §1-3：§1-2 复述通过(explained)；§3 指标算例未做；Memory-bound 判据与 Transformer Q/K/V 基础双回补中",
     "mode": "exercise_pending",
     "remediation_stack": [
-      "原目标：Day1 gate 独立练习通过 I11 §1-3 → 当前回补：算术强度判据（每步读固定权重+当前全部KV，只换回1个token的计算）→ 返回条件：不借助提示说出 Decode 每步读取字节数大而计算量极小、时间由显存带宽主导，故为 Memory-bound",
-      "原目标：Day1 gate 独立练习通过 → 当前回补：Transformer 最小基础（Q/K/V 投影来源、Decoder Block 逐层结构、lm head）→ 返回条件：能答出三问——①过一遍网络过的是什么②K/V从哪来为何缓存它们③Causal Mask为何允许Prefill并行；限定阅读 3.2§2.2-2.3/§4.1-4.2、3.3§2-3、3.7§2-3.2"
+      "原目标：Day1 gate 独立练习通过 I11 §1-3 → 当前回补：算术强度判据（每步读固定权重+当前全部KV，只换回1个token的计算）→ 返回条件：不借助提示说明低batch等条件下权重复用低、FLOPs/Bytes低为何可能访存受限，并知道batch/上下文/backend会改变瓶颈；不把所有Decode视作必然Memory-bound",
+      "原目标：Day1 gate 独立练习通过 → 当前回补：Transformer 最小基础（Q/K/V 投影来源、Decoder Block 逐层结构、lm head）→ 返回条件：能答出三问——①过一遍网络过的是什么②K/V从哪来为何缓存它们③Causal Mask为何允许Prefill并行；限定首读 T2(3.2)§5.3/§6.1-6.2→T3(3.3)§2/§3.1-3.5→T7(3.7)§2-3.2；3.2§2/§4仅Encoder-Decoder背景。输入/shape不懂补T9/P2必要小节"
     ],
-    "next_action": "回补模式：按 remediation_stack 第二条读 3.2/3.3/3.7 限定小节并回答三问；回补通过后先答 Memory-bound 判据题，再补 §3 指标算例，最后判 Day1 gate。",
-    "pending_question": "回补验收三问（3.2/3.3/3.7 限定小节）：①'过一遍网络'过的是什么②K/V 从哪来、为什么缓存 K/V 不缓存 Q③Causal Mask 为什么让 Prefill 能并行而因果不乱。回补完成后回到原题：不借助提示说明 Decode 为何访存受限。",
+    "next_action": "按11-17更新：T2§5.3/6.1-6.2→T3§2/3.1-3.5→T7§2-3.2；一次一题等待回答，回补通过再做I11§3指标算例及§4条件化瓶颈解释，最后判Day1 gate。环境核对仅准备，不推进学习成绩；通过后依次Day2必要硬件/数值、Day3最小推理。",
+    "pending_question": "先只问第一题：一个token ID怎样变成隐藏状态，经多层Decoder Block和lm head得到logits并选出下一token？等待用户回答后再问QKV来源/缓存与causal mask；不要一次抛三问或直接给答案。",
     "next_report": "已讲解并复述通过：Prefill并行处理已知Prompt（决定TTFT）、Decode每步串行+更新KV Cache（决定TPOT）；KV Cache账例0.5MB/token。未验证：Memory-bound判据未独立复现；指标算例未做。"
   },
   "days": {
@@ -1509,16 +1510,19 @@
     }
   },
   "recent_sessions": [
+    "learning/sessions/2026-11-17_00_plan_update.md",
     "learning/sessions/2026-11-16_01.md",
     "learning/sessions/2026-11-16_00_setup.md"
   ],
   "blockers": [
     "Memory-bound 机制未独立复现，Day1 gate 未通过，cursor 停留 Day1。",
-    "GPU/实测环境未确认（不影响理论环节）。",
+    "11-17用户报告Pro6000服务器已可用；具体SKU、显存、驱动/运行时、模型/数据与权限仍待核，不宣称可运行或已测。",
     "用户指示：时间灵活，不按固定分钟计时，有时间时主动来窗口即可。"
   ],
   "environment": {
-    "summary": "本地课程可读；跨设备应重新核对软件与硬件。",
-    "experimental_capability": "GPU型号、运行时、模型/数据权限和多卡条件均未确认。"
+    "summary": "11-17用户报告Pro6000服务器已可用；这是资源可用自述，不是现场配置核验。",
+    "experimental_capability": "具体GPU型号/显存、操作系统、驱动、隔离环境、PyTorch/CUDA/vLLM、模型授权、下载/执行权限与共享资源规则待核；没有实际连接、安装或运行。",
+    "source": "user_report_2026-11-17",
+    "verified_configuration": false
   }
 }

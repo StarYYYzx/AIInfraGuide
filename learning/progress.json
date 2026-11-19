@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "revision": 4,
-  "updated_at": "2026-11-17",
+  "revision": 5,
+  "updated_at": "2026-11-19",
   "course_commit": "bffa2b0bcbf1b3d5d33c5ba0869611a74f6c59e4",
   "repository": "https://github.com/StarYYYzx/AIInfraGuide",
   "policy": {
@@ -19,14 +19,14 @@
   "cursor": {
     "day": 1,
     "target_node": "I11",
-    "section": "I11 §1-3：§1-2 复述通过(explained)；§3 指标算例未做；Memory-bound 判据与 Transformer Q/K/V 基础双回补中",
+    "section": "I11 §1-3：§1-2 explained；注意力五步复述通过；append-only 因果链未独立闭环（讲解已给，待复验）；§3 指标算例未做",
     "mode": "exercise_pending",
     "remediation_stack": [
-      "原目标：Day1 gate 独立练习通过 I11 §1-3 → 当前回补：算术强度判据（每步读固定权重+当前全部KV，只换回1个token的计算）→ 返回条件：不借助提示说明低batch等条件下权重复用低、FLOPs/Bytes低为何可能访存受限，并知道batch/上下文/backend会改变瓶颈；不把所有Decode视作必然Memory-bound",
-      "原目标：Day1 gate 独立练习通过 → 当前回补：Transformer 最小基础（Q/K/V 投影来源、Decoder Block 逐层结构、lm head）→ 返回条件：能答出三问——①过一遍网络过的是什么②K/V从哪来为何缓存它们③Causal Mask为何允许Prefill并行；限定首读 T2(3.2)§5.3/§6.1-6.2→T3(3.3)§2/§3.1-3.5→T7(3.7)§2-3.2；3.2§2/§4仅Encoder-Decoder背景。输入/shape不懂补T9/P2必要小节"
+      "原目标：Day1 gate 独立练习通过 I11 §1-3 → 当前回补：算术强度判据 → 返回条件：不借助提示说出低batch下每步读固定权重+全量KV只换回1 token计算、时间由显存带宽主导（条件化表述）",
+      "原目标：Day1 gate 通过 → 当前回补：Transformer 最小基础 → 状态：T2/T3/T7 限定小节 read；掩码与五步复述通过(11-19)；剩 append-only 因果链复验与 Q2"
     ],
-    "next_action": "按11-17更新：T2§5.3/6.1-6.2→T3§2/3.1-3.5→T7§2-3.2；一次一题等待回答，回补通过再做I11§3指标算例及§4条件化瓶颈解释，最后判Day1 gate。环境核对仅准备，不推进学习成绩；通过后依次Day2必要硬件/数值、Day3最小推理。",
-    "pending_question": "先只问第一题：一个token ID怎样变成隐藏状态，经多层Decoder Block和lm head得到logits并选出下一token？等待用户回答后再问QKV来源/缓存与causal mask；不要一次抛三问或直接给答案。",
+    "next_action": "复验 append-only 与 Q2 通过后，做 I11§3 三个指标数字算例（TTFT/TPOT/E2E），再条件化瓶颈解释（低batch decode 访存受限），最后判 Day1 gate。",
+    "pending_question": "复验：用一句话说出因果掩码如何导致 KV Cache append-only（链：掩码→每层表示只由自己和过去决定→历史k/v恒定→缓存追加）；通过后问 Q2：为什么缓存 K/V 而不缓存 Q？",
     "next_report": "已讲解并复述通过：Prefill并行处理已知Prompt（决定TTFT）、Decode每步串行+更新KV Cache（决定TPOT）；KV Cache账例0.5MB/token。未验证：Memory-bound判据未独立复现；指标算例未做。"
   },
   "days": {
@@ -35,9 +35,11 @@
       "level": "explained",
       "gate": "exercise",
       "sessions": [
+        "learning/sessions/2026-11-19_01.md",
         "learning/sessions/2026-11-16_01.md"
       ],
       "evidence": [
+        "learning/evidence/2026-11-19_day1_transformer_remediation.md",
         "learning/evidence/2026-11-16_day1_diagnostic.md"
       ],
       "notes": "§1-2（Prefill/Decode、KV Cache）复述通过；§3 指标已讲解、算例未做；Memory-bound 判据待重验；§4 未学。无实测。"
@@ -1047,14 +1049,18 @@
       "notes": ""
     },
     "T2": {
-      "level": "unverified",
-      "evidence": [],
-      "notes": ""
+      "level": "read",
+      "evidence": [
+        "learning/evidence/2026-11-19_day1_transformer_remediation.md"
+      ],
+      "notes": "仅 §5.3、§6.1-6.2 讲解+阅读(2026-11-19)；§2/§4 仅作背景；未独立练习"
     },
     "T3": {
-      "level": "unverified",
-      "evidence": [],
-      "notes": ""
+      "level": "read",
+      "evidence": [
+        "learning/evidence/2026-11-19_day1_transformer_remediation.md"
+      ],
+      "notes": "仅 §2、§3.1-3.5 讲解+阅读；五步复述通过(11-19)；§4-8 未学"
     },
     "T4": {
       "level": "unverified",
@@ -1072,9 +1078,11 @@
       "notes": ""
     },
     "T7": {
-      "level": "unverified",
-      "evidence": [],
-      "notes": ""
+      "level": "read",
+      "evidence": [
+        "learning/evidence/2026-11-19_day1_transformer_remediation.md"
+      ],
+      "notes": "仅 §2、§3.1-3.2 讲解+阅读；掩码机制复述通过(11-19)；未独立练习"
     },
     "T8": {
       "level": "unverified",
@@ -1510,14 +1518,15 @@
     }
   },
   "recent_sessions": [
+    "learning/sessions/2026-11-19_01.md",
     "learning/sessions/2026-11-17_00_plan_update.md",
-    "learning/sessions/2026-11-16_01.md",
-    "learning/sessions/2026-11-16_00_setup.md"
+    "learning/sessions/2026-11-16_01.md"
   ],
   "blockers": [
-    "Memory-bound 机制未独立复现，Day1 gate 未通过，cursor 停留 Day1。",
-    "11-17用户报告Pro6000服务器已可用；具体SKU、显存、驱动/运行时、模型/数据与权限仍待核，不宣称可运行或已测。",
-    "用户指示：时间灵活，不按固定分钟计时，有时间时主动来窗口即可。"
+    "append-only 因果链未独立闭环（讲解已给，待复验）；Day1 gate 未过，cursor 停留 Day1。",
+    "git 推送多日失败（代理502）：本地提交 21c93fa/fd6c89b 及今日新增待推。",
+    "Pro6000 服务器可用为用户报告，未核实，不连接。",
+    "用户指示：时间灵活不计时。"
   ],
   "environment": {
     "summary": "11-17用户报告Pro6000服务器已可用；这是资源可用自述，不是现场配置核验。",

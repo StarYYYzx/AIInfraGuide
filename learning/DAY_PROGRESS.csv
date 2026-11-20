@@ -1,9 +1,9 @@
 day,week,weekday_slot,topic,documents,status,level,gate,sessions,evidence,notes
-1,1,1,系统地图与培训前导入,T2 T3 T7 I11 P2 P4,in_progress,explained,exercise,learning/sessions/2026-11-19_01.md;learning/sessions/2026-11-16_01.md,learning/evidence/2026-11-19_day1_transformer_remediation.md;learning/evidence/2026-11-16_day1_diagnostic.md,§1-2（Prefill/Decode、KV Cache）复述通过；§3 指标已讲解、算例未做；Memory-bound 判据待重验；§4 未学。无实测。
+1,1,1,系统地图与培训前导入,I11 T3 T8 P2 P4,in_progress,explained,exercise,learning/sessions/2026-11-19_02.md;learning/sessions/2026-11-19_01.md,learning/evidence/2026-11-19_day1_transformer_remediation.md;learning/evidence/2026-11-16_day1_diagnostic.md,§1-2（Prefill/Decode、KV Cache）复述通过；§3 指标已讲解、算例未做；Memory-bound 判据待重验；§4 未学。无实测。
 2,1,2,系统地图与培训前导入,P4 P2 P1 I12,not_started,unverified,pending,,,
 3,1,3,系统地图与培训前导入,I12 I11 P3,not_started,unverified,pending,,,
-4,1,4,系统地图与培训前导入,P3 P2 Q41 Q45 E91,not_started,unverified,pending,,,
-5,1,5,系统地图与培训前导入,I11 I12 P2 Q41,not_started,unverified,pending,,,
+4,1,4,系统地图与培训前导入,P3 P2,not_started,unverified,pending,,,
+5,1,5,系统地图与培训前导入,I11 I12 Q46,not_started,unverified,pending,,,
 6,2,1,模型全景与端侧测量入口,R1 T2 T9,not_started,unverified,pending,,,
 7,2,2,模型全景与端侧测量入口,T8 I12 P3,not_started,unverified,pending,,,
 8,2,3,模型全景与端侧测量入口,E91 I11,not_started,unverified,pending,,,

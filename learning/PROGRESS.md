@@ -2,27 +2,27 @@
 
 > 自动由 progress.json 生成。修改真实状态后运行 python learning/tools/progress.py render；不直接改本文件。
 
-- 更新：2026-11-19（revision 5）
+- 更新：2026-11-20（revision 9）
 - 主线验收通过：0/120 学习日
 - 当前：第1学习日 / W1D1 / 系统地图与培训前导入
 - 状态：in_progress；能力证据等级：explained
-- 已核实学习事实：11-16会话证据支持I11§1–2复述通过；Day1仍in_progress/explained。指标算例未做，Transformer数据流与访存判据需回补，尚无实测。11-17仅更新指导与资源事实，不增加学习通过项。
+- 已核实学习事实：I11§1–2复述通过；11-19注意力五步与掩码机制复述通过，T2/T3/T7等级仍为read。缓存只追加的因果链仅用户自述理解，留待Q2自然检验；三指标与条件化访存解释待验。11-20仅更新规划，无新增作答或实测，Day1仍in_progress/explained。
 
 ## 下一位AI从这里继续
 
-- 首读顺序：[T2 · 3.2 Transformer全貌及代码实现](../docs/guides/%E6%A8%A1%E5%9D%97%E4%B8%80-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/transformer/3.2%20Transformer%E5%85%A8%E8%B2%8C%E5%8F%8A%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0.md) → [T3 · 3.3 Self-Attention机制深入理解](../docs/guides/%E6%A8%A1%E5%9D%97%E4%B8%80-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/transformer/3.3%20Self-Attention%E6%9C%BA%E5%88%B6%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3.md) → [T7 · 3.7 Transformer Decoder Block完整解析](../docs/guides/%E6%A8%A1%E5%9D%97%E4%B8%80-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/transformer/3.7%20Transformer%20Decoder%20Block%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90.md) → [I11 · 1.1-LLM推理基础](../docs/guides/%E6%A8%A1%E5%9D%97%E5%9B%9B-%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96/%E7%AC%AC1%E7%AB%A0-LLM%E6%8E%A8%E7%90%86%E5%9F%BA%E7%A1%80/1.1-LLM%E6%8E%A8%E7%90%86%E5%9F%BA%E7%A1%80.md) → [P2 · 第2章-数学基础](../docs/guides/%E6%A8%A1%E5%9D%97%E4%B8%80-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/%E7%AC%AC2%E7%AB%A0-%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80.md) → [P4 · gpu-basics](../docs/guides/%E6%A8%A1%E5%9D%97%E4%B8%80-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/gpu/gpu-basics.md)
-- 当前计划版本：2026-11-17.1（[近期更新](PLAN_UPDATE_2026-11-17.md)，实际回补栈优先）
-- 当天限定范围：保留Day1：先T2§5.3/6.1–6.2（Decoder-only）→T3§2/3.1–3.5→T7§2–3.2；必要补T9词嵌入与P2§2；回到I11§3指标算例及§4瓶颈，算术强度补P2§3.2–3.3/P4§3.3。分多个工作日，一次一题。
-- 当前精确断点：I11 §1-3：§1-2 explained；注意力五步复述通过；append-only 因果链未独立闭环（讲解已给，待复验）；§3 指标算例未做
-- 下一动作：复验 append-only 与 Q2 通过后，做 I11§3 三个指标数字算例（TTFT/TPOT/E2E），再条件化瓶颈解释（低batch decode 访存受限），最后判 Day1 gate。
-- 待提问：复验：用一句话说出因果掩码如何导致 KV Cache append-only（链：掩码→每层表示只由自己和过去决定→历史k/v恒定→缓存追加）；通过后问 Q2：为什么缓存 K/V 而不缓存 Q？
+- 首读顺序：[I11 · 1.1-LLM推理基础](../docs/guides/%E6%A8%A1%E5%9D%97%E5%9B%9B-%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96/%E7%AC%AC1%E7%AB%A0-LLM%E6%8E%A8%E7%90%86%E5%9F%BA%E7%A1%80/1.1-LLM%E6%8E%A8%E7%90%86%E5%9F%BA%E7%A1%80.md) → [T3 · 3.3 Self-Attention机制深入理解](../docs/guides/%E6%A8%A1%E5%9D%97%E4%B8%80-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/transformer/3.3%20Self-Attention%E6%9C%BA%E5%88%B6%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3.md) → [T8 · 3.8 从Transformer到LLM自回归生成深入理解](../docs/guides/%E6%A8%A1%E5%9D%97%E4%B8%80-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/transformer/3.8%20%E4%BB%8ETransformer%E5%88%B0LLM%E8%87%AA%E5%9B%9E%E5%BD%92%E7%94%9F%E6%88%90%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3.md) → [P2 · 第2章-数学基础](../docs/guides/%E6%A8%A1%E5%9D%97%E4%B8%80-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/%E7%AC%AC2%E7%AB%A0-%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80.md) → [P4 · gpu-basics](../docs/guides/%E6%A8%A1%E5%9D%97%E4%B8%80-%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86/gpu/gpu-basics.md)
+- 当前计划版本：2026-11-20.2（[近期更新](PLAN_UPDATE_2026-11-20.md)，实际回补栈优先）
+- 当天限定范围：从Q2（为什么缓存K/V不缓存历史Q）开始，自然检验因果性与缓存只追加；优先I11§2，卡点才补T3§10/T8§6，不重读T2/T3/T7。通过后I11§3三指标→§4条件化瓶颈，必要补P2§3.2–3.3/P4§3.3。
+- 当前精确断点：I11 §1-3：§1-2 explained；五步复述通过；append-only 用户自述理解跳过复验（Q2 中自然检验）
+- 下一动作：Q2 通过后核对 I11§3 指标算例已完成部分（11-19 下午：①②③④独立正确，⑤N=1 AI纠错未复述，计时边界独立正确），补 ⑤ 复述后做条件化瓶颈解释，判 Day1 gate。
+- 待提问：Q2：为什么 KV Cache 缓存的是 K 和 V，而不缓存 Q？（提示链：append-only 已定义为术语并跳过复验——用户自述理解；Q2 答案依赖该因果链，可作自然检验）
 - 回补栈：原目标：Day1 gate 独立练习通过 I11 §1-3 → 当前回补：算术强度判据 → 返回条件：不借助提示说出低batch下每步读固定权重+全量KV只换回1 token计算、时间由显存带宽主导（条件化表述） → 原目标：Day1 gate 通过 → 当前回补：Transformer 最小基础 → 状态：T2/T3/T7 限定小节 read；掩码与五步复述通过(11-19)；剩 append-only 因果链复验与 Q2
-- 下次汇报：已讲解并复述通过：Prefill并行处理已知Prompt（决定TTFT）、Decode每步串行+更新KV Cache（决定TPOT）；KV Cache账例0.5MB/token。未验证：Memory-bound判据未独立复现；指标算例未做。
+- 下次汇报：11-20可直接汇报11-19证据：我能复述注意力五步及因果掩码。历史K/V为何可复用已讲解，仍待在Q2中独立解释；指标与瓶颈待验，无实测。周一晨会只汇报周五实际完成的证据。
 
 ## 当前阻塞与环境
 
-- append-only 因果链未独立闭环（讲解已给，待复验）；Day1 gate 未过，cursor 停留 Day1。
-- git 推送多日失败（代理502）：本地提交 21c93fa/fd6c89b 及今日新增待推。
+- 11-19 傍晚问答已补录（session 02）；Q2 与条件化瓶颈解释待独立作答；Day1 gate 未过。
+- 上游课程仓库 origin/main 有新提交未合并（拉取协议应为 learning-fork；是否合并上游由用户决定）。
 - Pro6000 服务器可用为用户报告，未核实，不连接。
 - 用户指示：时间灵活不计时。
 
@@ -31,9 +31,9 @@
 
 ## 最近会话
 
+- [learning/sessions/2026-11-19_02.md](sessions/2026-11-19_02.md)
 - [learning/sessions/2026-11-19_01.md](sessions/2026-11-19_01.md)
 - [learning/sessions/2026-11-17_00_plan_update.md](sessions/2026-11-17_00_plan_update.md)
-- [learning/sessions/2026-11-16_01.md](sessions/2026-11-16_01.md)
 
 ## 120学习日进度
 
@@ -41,11 +41,11 @@
 
 | 学习日 | 主课 | 状态 | 证据等级 | 最近会话 |
 |---|---|---|---|---|
-| 1 / W1D1 | T2 → T3 → T7 → I11 → P2 → P4 | in_progress | explained | learning/sessions/2026-11-19_01.md, learning/sessions/2026-11-16_01.md |
+| 1 / W1D1 | I11 → T3 → T8 → P2 → P4 | in_progress | explained | learning/sessions/2026-11-19_02.md, learning/sessions/2026-11-19_01.md |
 | 2 / W1D2 | P4 → P2 → P1 → I12 | not_started | unverified | — |
 | 3 / W1D3 | I12 → I11 → P3 | not_started | unverified | — |
-| 4 / W1D4 | P3 → P2 → Q41 → Q45 → E91 | not_started | unverified | — |
-| 5 / W1D5 | I11 → I12 → P2 → Q41 | not_started | unverified | — |
+| 4 / W1D4 | P3 → P2 | not_started | unverified | — |
+| 5 / W1D5 | I11 → I12 → Q46 | not_started | unverified | — |
 | 6 / W2D1 | R1 → T2 → T9 | not_started | unverified | — |
 | 7 / W2D2 | T8 → I12 → P3 | not_started | unverified | — |
 | 8 / W2D3 | E91 → I11 | not_started | unverified | — |

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "revision": 6,
-  "updated_at": "2026-11-19",
+  "revision": 9,
+  "updated_at": "2026-11-20",
   "course_commit": "bffa2b0bcbf1b3d5d33c5ba0869611a74f6c59e4",
   "repository": "https://github.com/StarYYYzx/AIInfraGuide",
   "policy": {
@@ -13,7 +13,7 @@
     "advance": "only after evidence-based gate"
   },
   "baseline": {
-    "verified_learning": "11-16会话证据支持I11§1–2复述通过；Day1仍in_progress/explained。指标算例未做，Transformer数据流与访存判据需回补，尚无实测。11-17仅更新指导与资源事实，不增加学习通过项。",
+    "verified_learning": "I11§1–2复述通过；11-19注意力五步与掩码机制复述通过，T2/T3/T7等级仍为read。缓存只追加的因果链仅用户自述理解，留待Q2自然检验；三指标与条件化访存解释待验。11-20仅更新规划，无新增作答或实测，Day1仍in_progress/explained。",
     "assumptions": "不预设CUDA Reduce完成，不预设周末学习或某模型已跑通。"
   },
   "cursor": {
@@ -25,9 +25,9 @@
       "原目标：Day1 gate 独立练习通过 I11 §1-3 → 当前回补：算术强度判据 → 返回条件：不借助提示说出低batch下每步读固定权重+全量KV只换回1 token计算、时间由显存带宽主导（条件化表述）",
       "原目标：Day1 gate 通过 → 当前回补：Transformer 最小基础 → 状态：T2/T3/T7 限定小节 read；掩码与五步复述通过(11-19)；剩 append-only 因果链复验与 Q2"
     ],
-    "next_action": "Q2 通过后做 I11§3 三个指标数字算例（TTFT/TPOT/E2E），再条件化瓶颈解释，最后判 Day1 gate。",
+    "next_action": "Q2 通过后核对 I11§3 指标算例已完成部分（11-19 下午：①②③④独立正确，⑤N=1 AI纠错未复述，计时边界独立正确），补 ⑤ 复述后做条件化瓶颈解释，判 Day1 gate。",
     "pending_question": "Q2：为什么 KV Cache 缓存的是 K 和 V，而不缓存 Q？（提示链：append-only 已定义为术语并跳过复验——用户自述理解；Q2 答案依赖该因果链，可作自然检验）",
-    "next_report": "已讲解并复述通过：Prefill并行处理已知Prompt（决定TTFT）、Decode每步串行+更新KV Cache（决定TPOT）；KV Cache账例0.5MB/token。未验证：Memory-bound判据未独立复现；指标算例未做。"
+    "next_report": "11-20可直接汇报11-19证据：我能复述注意力五步及因果掩码。历史K/V为何可复用已讲解，仍待在Q2中独立解释；指标与瓶颈待验，无实测。周一晨会只汇报周五实际完成的证据。"
   },
   "days": {
     "1": {
@@ -35,8 +35,8 @@
       "level": "explained",
       "gate": "exercise",
       "sessions": [
-        "learning/sessions/2026-11-19_01.md",
-        "learning/sessions/2026-11-16_01.md"
+        "learning/sessions/2026-11-19_02.md",
+        "learning/sessions/2026-11-19_01.md"
       ],
       "evidence": [
         "learning/evidence/2026-11-19_day1_transformer_remediation.md",
@@ -1518,13 +1518,13 @@
     }
   },
   "recent_sessions": [
+    "learning/sessions/2026-11-19_02.md",
     "learning/sessions/2026-11-19_01.md",
-    "learning/sessions/2026-11-17_00_plan_update.md",
-    "learning/sessions/2026-11-16_01.md"
+    "learning/sessions/2026-11-17_00_plan_update.md"
   ],
   "blockers": [
-    "append-only 为用户自述理解、未经独立复验（在 Q2 中自然检验）；Day1 gate 未过。",
-    "git 推送已恢复：积压提交已全部推送成功（8435bac）。",
+    "11-19 傍晚问答已补录（session 02）；Q2 与条件化瓶颈解释待独立作答；Day1 gate 未过。",
+    "上游课程仓库 origin/main 有新提交未合并（拉取协议应为 learning-fork；是否合并上游由用户决定）。",
     "Pro6000 服务器可用为用户报告，未核实，不连接。",
     "用户指示：时间灵活不计时。"
   ],
